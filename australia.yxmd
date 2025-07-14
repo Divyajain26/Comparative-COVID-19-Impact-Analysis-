@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">D:\COVID Impact Comparison\all_weekly_excess_deaths.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>all_weekly_excess_deaths.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="country" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="region" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="region_code" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="start_date" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="end_date" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="days" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="year" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="week" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="population" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="total_deaths" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="covid_deaths" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="expected_deaths" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="excess_deaths" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="non_covid_deaths" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="covid_deaths_per_100k" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="excess_deaths_per_100k" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+            <Field name="excess_deaths_pct_change" size="254" source="File: D:\COVID Impact Comparison\all_weekly_excess_deaths.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>country</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2025-07-13 20:23:30</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Australia</Operand>
+              <StartDate>2025-07-13 20:23:30</StartDate>
+              <EndDate>2025-07-13 20:23:30</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[country] = "Australia"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="246" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="True" />
+          <SelectFields>
+            <SelectField field="region" selected="False" />
+            <SelectField field="region_code" selected="False" />
+            <SelectField field="start_date" selected="False" />
+            <SelectField field="end_date" selected="False" />
+            <SelectField field="days" selected="False" />
+            <SelectField field="year" selected="True" type="Int32" size="4" />
+            <SelectField field="week" selected="False" />
+            <SelectField field="population" selected="False" />
+            <SelectField field="total_deaths" selected="True" type="Int32" size="4" />
+            <SelectField field="covid_deaths" selected="True" type="Int32" size="4" />
+            <SelectField field="expected_deaths" selected="False" />
+            <SelectField field="excess_deaths" selected="True" type="Int32" size="4" />
+            <SelectField field="non_covid_deaths" selected="False" />
+            <SelectField field="covid_deaths_per_100k" selected="False" />
+            <SelectField field="excess_deaths_per_100k" selected="False" />
+            <SelectField field="excess_deaths_pct_change" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="342" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="year" action="GroupBy" rename="year" />
+            <SummarizeField field="total_deaths" action="Sum" rename="Sum_total_deaths" />
+            <SummarizeField field="excess_deaths" action="Sum" rename="Sum_excess_deaths" />
+            <SummarizeField field="covid_deaths" action="Sum" rename="Sum_covid_deaths" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="438" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\DeLL\AppData\Local\Temp\Alteryx\Engine_18664_5ae7ae57ff514d1caf943f7a90aa784e_\Engine_18664_a47a39320e9946bead7d42e43c485539~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="426" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">D:\COVID Impact Comparison\australia_covid_summary.xlsx|||Sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <MipTenantId />
+            <PreserveFormat>False</PreserveFormat>
+            <MipSensitivity />
+            <UNCLocal>False</UNCLocal>
+            <SkipFieldNames>False</SkipFieldNames>
+            <SuppressBlankFile>False</SuppressBlankFile>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>australia_covid_summary.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="True" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c7d2ada1-9d10-439b-9e8e-1592a3f45630" />
+      <Telemetry>
+        <PreviousWorkflowId value="2b32a447-ccec-4d78-a5e4-7e3e48d90c33" />
+        <OriginWorkflowId value="2b32a447-ccec-4d78-a5e4-7e3e48d90c33" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
